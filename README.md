@@ -1,1 +1,5 @@
-# N8N-AI-LinkedInpost_Generator
+Keeping up with the latest tech and AI news every morning is one thing—summarizing and sharing it with your network is another. So I automated it using AI! 📰🤖.I just built an automated AI Tech News Summarizer using n8n and Google Gemini. Every morning at 9:00 AM, this workflow runs in the background and publishes a curated Tech Brief straight to my LinkedIn profile.
+🔹 Trigger: An n8n Schedule Trigger fires every day at 9 AM.
+🔹 Data Fetching: An RSS Read node pulls the latest articles from the TechCrunch feed, and an Aggregate node combines the titles, links, content, and content snippets.
+🔹 AI Reasoning: The aggregated data is passed into a Basic LLM Chain node powered by Google Gemini 3.1 Flash Lite, which generates a professional, concise Tech Brief covering up to 3 AI         news items and up to 3 broader technology updates—complete with all-caps headlines, 1–2 sentence summaries, and article links.
+🔹 Delivery: The LinkedIn node automatically publishes the formatted post straight to my feed.
